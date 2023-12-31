@@ -1,0 +1,204 @@
+#Methods/Functions
+'''def printstuff(stuff):
+    for i,s in enumerate(stuff):
+        print("place",i,"letter",s)
+
+name = "govind"
+printstuff(name)
+import matplotlib.pyplot as plt '''
+
+#Class
+'''
+class Circle(object):
+    def __init__(scir,radius,color):
+        scir.radius = radius
+        scir.color = color
+
+    def add_radius(scir,r):
+        scir.radius = scir.radius+r
+
+    def drawCircle(self):
+        plt.gca().add_patch(plt.Circle((0, 0), radius=self.radius, fc=self.color))
+        plt.axis('scaled')
+        plt.show()  
+
+class Rectangle(object):
+    def _init_(self,height,width,color):
+        self.height = height
+        self.width = width
+        self.color = color
+
+C1 = Circle(10,"red")
+C2 = Circle(9,"blue")
+C1.add_radius(3)
+print(C1.radius)  '''
+
+#Student-School Enrollment
+#Student management system,accept students,name,rollno:,mark,sub ,give roll no: display all attributes,dlt,update,student certificate uploading
+'''
+class student(object):
+    def __init__(self,name,rollno,marks,sub):
+        self.name = name
+        self.rollno = rollno
+        self.marks = marks
+        self.sub = sub
+
+    def getname(self):
+        return self.name
+
+    def getrollno(self):
+        return self.rollno
+
+    def getmarks(self):
+        return self.marks
+
+    def getsub(self):
+        return self.sub
+
+    def setname(self,name):
+        self.name = name
+
+    def setrollno(self,rollno):
+        self.rollno = rollno
+
+    def setmarks(self,marks):
+        self.marks = marks
+
+    def setsub(self,sub):
+        self.sub = sub
+    
+    def search(self,rollno):
+        x = input("rollno")
+        if x in self.rollno:
+            print(self.name,x)
+    
+
+
+
+
+    def __str__(self):
+        return "Name: "+self.name+"\nRoll No: "+str(self.rollno)+"\nMarks: "+str(self.marks)+"\nSubject: "+self.sub
+    
+S1 = student("Govind",1,8,"BTech AIE")
+S2 = student("Ramu",100,7,"BTech CSE")
+S3 = student("Res",2,8.2,"Msc phy")
+
+search(x)
+
+#Inheritance
+
+target = int(input()) # Enter a number between 0 and 1000
+# 🚨 Do not change the code above ☝️
+
+# Write your code here 👇
+total = 0
+for a in range(target):
+  while a//2==0:
+      total += a
+      
+print(total) 
+
+def addition(x,y):
+    sum = x+y
+    return sum
+ 
+
+def main():
+    a = int(input("Enter a number"))
+    b = int(input("Enter a number"))
+    print(addition(a,b))
+    if (a+b)%2 == 0:
+        print("even")
+    else:
+        print("odd")
+
+if __name__ == '__main__':
+    main()
+
+class school:
+    def __init__(self,name,code,star):
+        self.name = name
+        self.code = code
+        self.star = star
+
+    def search(self,x):
+        x = input("code")
+        if x in self.code:
+            return print(self.name)
+
+    def setname(self,name):
+        self.name = name
+    def getname(self):
+        return self.name
+    def setcode(self,code):
+        self.code = code
+    def getcode(self):
+        return self.code
+    def setstar(self,star):
+        self.star = star
+    def getstar(self):
+        return self.star
+
+    def __str__(self):
+        return "Name: "+self.name+"\nCode: "+str(self.code)+"\nStar: "+str(self.star)
+    
+def main():
+    s1 = school('Bangalore Public School','BPS',4)
+    s2 = school('Delhi Public School','DPS',5)
+    s3 = school('Mysore Public School','MPS',3)
+    s4 = school('Mumbai Public School','MPS',4)
+
+    print(s1)
+    
+
+if __name__ == '__main__':
+    main()
+    
+
+def biodata(name,UGdegree,income):
+    print("name:",name)
+    print("UGdegree:",UGdegree)
+    print("income:",income)
+def main():
+    n = input("Name")
+    UG = input("UG")
+    income = input("income")
+
+    biodata(n,UG,income)
+
+if __name__ == '__main__':
+    main()    
+'''
+#Calculator
+
+#ops
+
+def add(x,y):
+    return x+y
+def sub(x,y):
+    return x-y
+def mul(x,y):
+    return x*y
+def div(x,y):
+    if y==0:
+        print("Division by zero not possible")
+    else:
+        return x/y
+
+
+#op dictionary
+    
+ops = {"+":add,"-":sub,"*":mul,"/":div}
+
+a  = int(input("First no:"))
+b = int(input("Second no:"))
+print("Operations")
+
+for symbol in ops:
+    print(symbol)
+
+op_symbol = input("Enter the operator")
+
+fn = ops[op_symbol]
+answer = fn(a,b)
+print(a,op_symbol,b,"=",answer)
